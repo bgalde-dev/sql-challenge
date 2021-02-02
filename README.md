@@ -18,5 +18,5 @@ Tables should be loaded in the following order to not run afowl of constraints
 6. dep_manager
 
 # Files
-* The [schema.sql](schema.sql) will create the database tables primary and foreign keys, and other contsraints.
-* The [query.sql](query.sql) will create the database tables primary and foreign keys, and other contsraints.
+* The [schema.sql](EmployeeSQL/schema.sql) will create the database tables primary and foreign keys, and other contsraints.
+* The [query.sql](EmployeeSQL/query.sql) will create the database tables primary and foreign keys, and other contsraints.
