@@ -1,25 +1,20 @@
--- Make sure all tables are populated
-select * from salaries;
-select * from employees;
-select * from departments;
-select * from dep_emp;
-select * from dep_manager;
+-- Queries as described for the project
 
 -- List the following details of each employee: employee number, last name, first name, sex, and salary.
-SELECT emp_no AS "employee number", 
-    last_name AS "last name", 
-    first_name AS "first name", 
-    sex AS "sex", 
+SELECT employees.emp_no AS "employee number", 
+    employees.last_name AS "last name", 
+    employees.first_name AS "first name", 
+    employees.sex AS "sex", 
     salaries.salary AS "salary" FROM employees
-INNER JOIN ON salaries
-WHERE employees.emp_no = salaries.emp_no;
+INNER JOIN salaries ON employees.emp_no = salaries.emp_no;
+
 
 -- List first name, last name, and hire date for employees who were hired in 1986.
-SELECT first_name AS "first name", 
-	last_name AS "last name",     
-    hire_date AS "hire date"
+SELECT employees.first_name AS "first name", 
+	employees.last_name AS "last name",     
+    employees.hire_date AS "hire date"
 FROM employees
-WHERE date_part('year',hire_date) = 1986;
+WHERE date_part('year',employees.hire_date) = 1986;
 
 -- List the manager of each department with the following information: department number, 
 -- department name, the manager's employee number, last name, first name.

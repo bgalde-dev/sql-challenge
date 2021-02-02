@@ -16,7 +16,7 @@ CREATE TABLE employees (
 CREATE TABLE salaries (
     emp_no int   NOT NULL,
     salary dec   NOT NULL,
-    CONSTRAINT pk_dep_emp PRIMARY KEY (emp_no, salary)
+    CONSTRAINT pk_salaries PRIMARY KEY (emp_no, salary)
 );
 
 CREATE TABLE titles (

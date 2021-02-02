@@ -20,3 +20,5 @@ Tables should be loaded in the following order to not run afowl of constraints
 # Files
 * The [schema.sql](EmployeeSQL/schema.sql) will create the database tables primary and foreign keys, and other contsraints.
 * The [query.sql](EmployeeSQL/query.sql) will create the database tables primary and foreign keys, and other contsraints.
+* The [erd.txt](EmployeeSQL/erd.txt) will create the realtionship diagram inusing [Quick DBD](https://app.quickdatabasediagrams.com/). Some modification was done post export.
+* The [bonus.ipynb](EmployeeSQL/bonus.ipynb) is the Jupyter Notebook for the bonus challenge. You will need to create a file called config.py with your username and password information for your database.
