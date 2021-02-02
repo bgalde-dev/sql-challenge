@@ -15,7 +15,8 @@ CREATE TABLE employees (
 
 CREATE TABLE salaries (
     emp_no int   NOT NULL,
-    salary dec   NOT NULL
+    salary dec   NOT NULL,
+    CONSTRAINT pk_dep_emp PRIMARY KEY (emp_no, salary)
 );
 
 CREATE TABLE titles (
@@ -34,12 +35,14 @@ CREATE TABLE departments (
 
 CREATE TABLE dep_emp (
     emp_no int   NOT NULL,
-    dept_no varchar(4)   NOT NULL
+    dept_no varchar(4)   NOT NULL,
+    CONSTRAINT pk_dep_emp PRIMARY KEY (dept_no, emp_no)
 );
 
 CREATE TABLE dep_manager (
     dept_no char(4)   NOT NULL,
-    emp_no int   NOT NULL
+    emp_no int   NOT NULL,
+    CONSTRAINT pk_dep_manager PRIMARY KEY (dept_no, emp_no)
 );
 
 ALTER TABLE employees ADD CONSTRAINT fk_employees_emp_title_id FOREIGN KEY(emp_title_id)
